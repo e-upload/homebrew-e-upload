@@ -4,8 +4,8 @@
 class EUpload < Formula
   desc "way to tranport easily"
   homepage ""
-  url "https://github.com/e-upload/e-upload/releases/download/v0.0.1/e-upload"
-  sha256 "706f8c41b25bceb032a334a9a5d9295711738ed038b317414af4580a54fd2055"
+  url "https://github.com/e-upload/e-upload/releases/download/v0.0.1/e-upload.tar.gz"
+  sha256 "ceaf60d964451a69d34ceb1284a70abaca3311a87606dd1533446aa4ebec3e0f"
   # depends_on "cmake" => :build
 
   def install
@@ -18,6 +18,7 @@ class EUpload < Formula
     # system "cmake", ".", *std_cmake_args
     system "make", "install" # if this fails, try separate make/make install steps
     bin.install "e-upload"
+
   end
 
   test do
